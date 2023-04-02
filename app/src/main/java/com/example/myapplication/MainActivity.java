@@ -112,7 +112,12 @@ public class MainActivity extends AppCompatActivity {
 
             result.setText(classes[maxPos]);
 
+            // display the confidence in percentage
+            maxConfidence = maxConfidence * 100;
             String stringConfidence=String.valueOf(maxConfidence);
+            stringConfidence = stringConfidence.substring(0, 2);
+            stringConfidence = stringConfidence + " %";
+
             confidence.setText(stringConfidence);
 
             // Releases model resources if no longer used.
